@@ -182,12 +182,14 @@ class gymApp:
 
                 print("Invalid choice! please try again.")
 
- if __name__ == "__main__":
-
+if __name__ == "__main__":
+     
      app = gymApp()
 
      app.register_user()
 
      app.menu()
+     
+     
 
 
