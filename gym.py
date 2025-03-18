@@ -7,14 +7,16 @@ class user:
     def __init__(self, name, age, weight):
 
         self.name = name
+
         self.age = age
+
         self.weight = weight
 
         self.workout_history = []
 
     def add_workout(self, workout):
 
-        self.workout = history.append(workout)
+        self.workout_history.append(workout)
 
     def show_workout(self):
 
@@ -33,11 +35,14 @@ class workout:
     def __init__(self, name, duration, difficulty):
 
         self.name = name
+
         self.duration = duration
+
         self.difficulty = difficulty
 
     def __str__(self):
-        return f "{self.name} ({self.duration} minutes) - Difficulty: {self.difficulty}"
+
+        return f"{self.name} ({self.duration} minutes) - Difficulty: {self.difficulty}"
 
 class workoutplan:
 
@@ -102,9 +107,9 @@ class gymApp:
 
         chosen = random.choice(exercise)
 
-    print(f"AI suggest:{Chosen[0]}({chosen[1]} minutes) - Difficulty: {chosen[27]}")
+        print(f"AI suggest:{Chosen[0]}({chosen[1]} minutes) - Difficulty: {chosen[2]}")
 
-    self.user.add_workout(chose[0])
+        self.user.add_workout(chose[0])
 
     def rest_timer(self, seconds):
 
@@ -171,18 +176,18 @@ class gymApp:
 
                 print("Exiting Gym workout App stay fit!")
 
-                break:
+                break
 
             else:
 
                 print("Invalid choice! please try again.")
 
-        if __name__ == "__main__":
+ if __name__ == "__main__":
 
-            app = gymApp()
+     app = gymApp()
 
-            app.register_user()
+     app.register_user()
 
-            app.menu()
+     app.menu()
 
 
