@@ -18,15 +18,17 @@ class user:
 
         self.workout_history.append(workout)
 
-    def show_workout(self):
+    def show_history(self):
 
         if not self.workout_history:
+
             print("No workout recorded yet.")
 
         else:
             print("workout history:")
 
             for workout in self.workout_history:
+
                 print(workout)
 
 
@@ -42,7 +44,7 @@ class workout:
 
     def __str__(self):
 
-        return f"{self.name} ({self.duration} minutes) - Difficulty: {self.difficulty}"
+        return f"{self.name} ({self.duration} min) - Difficulty: {self.difficulty}"
 
 class workoutplan:
 
@@ -107,7 +109,7 @@ class gymApp:
 
         chosen = random.choice(exercise)
 
-        print(f"AI suggest:{Chosen[0]}({chosen[1]} minutes) - Difficulty: {chosen[2]}")
+        print(f"AI suggest:{Chosen[0]}({chosen[1]} min) - Difficulty: {chosen[2]}")
 
         self.user.add_workout(chose[0])
 
@@ -156,7 +158,7 @@ class gymApp:
 
                     print("No use found please register first.")
 
-            elif choice =="3":
+            elif choice == "3":
 
                 if self.user:
 
@@ -184,11 +186,11 @@ class gymApp:
 
 if __name__ == "__main__":
      
-     app = gymApp()
+    app = gymApp()
 
-     app.register_user()
+    app.register_user()
 
-     app.menu()
+    app.menu()
      
      
 
